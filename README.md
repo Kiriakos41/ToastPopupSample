@@ -30,4 +30,4 @@ dotnet add package Mopups
 
 2. Call the toast helper method anywhere to show a toast:
 
-<pre> ``` await ToastPopup.ShowAsync("Your message here"); ``` </pre>
+await ToastPopup.ShowAsync("Your message here");
