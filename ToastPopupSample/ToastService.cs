@@ -5,11 +5,11 @@ namespace ToastPopupSample;
 
 public static class ToastService
 {
-    public static void Show(string message)
+    public static void Show(string message, int durationMilliseconds = 5000)
     {
         MainThread.BeginInvokeOnMainThread(async () =>
         {
-            var popup = new ToastPopup(message);
+            var popup = new ToastPopup(message, durationMilliseconds);
             await MopupService.Instance.PushAsync(popup);
         });
     }
