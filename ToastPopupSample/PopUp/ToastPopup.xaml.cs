@@ -5,7 +5,7 @@ namespace ToastPopupSample.PopUp;
 
 public partial class ToastPopup : PopupPage
 {
-    public ToastPopup(string message, int durationMilliseconds = 5000)
+    public ToastPopup(string message, int durationMilliseconds = 3000)
     {
         InitializeComponent();
 
@@ -27,7 +27,7 @@ public partial class ToastPopup : PopupPage
                 ToastBorder.FadeTo(1, 200, Easing.CubicIn)          // Fade in opacity to fully visible
             );
 
-            // Keep the toast visible for the specified duration (default 5000 ms = 5 seconds)
+            // Keep the toast visible for the specified duration (default 3000 ms = 3 seconds)
             await Task.Delay(durationMilliseconds);
 
             // Animate the toast sliding back up and fading out simultaneously

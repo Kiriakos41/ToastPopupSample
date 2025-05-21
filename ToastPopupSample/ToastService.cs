@@ -5,7 +5,7 @@ namespace ToastPopupSample;
 
 public static class ToastService
 {
-    public static void Show(string message, int durationMilliseconds = 5000)
+    public static void Show(string message, int durationMilliseconds = 3000)
     {
         MainThread.BeginInvokeOnMainThread(async () =>
         {

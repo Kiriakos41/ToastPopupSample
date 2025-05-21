@@ -3,27 +3,30 @@
     x:Class="ToastPopupSample.PopUp.ToastPopup"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:av="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
     xmlns:mopup="clr-namespace:Mopups.Pages;assembly=Mopups"
     Title="ToastPopup"
     Background="Transparent"
     BackgroundColor="Transparent"
     HasSystemPadding="False">
-    <Grid Padding="0" ColumnDefinitions="*">
-        <Border
+    <Grid Padding="0">
+        <av:AcrylicView
             x:Name="ToastBorder"
-            Margin="10,40,10,10"
-            Padding="20"
-            BackgroundColor="Black"
-            Stroke="Transparent"
-            StrokeShape="RoundRectangle 12"
+            Margin="20,60,20,0"
+            CornerRadius="50"
+            EffectStyle="Light"
+            HeightRequest="80"
             VerticalOptions="Start">
+
             <Label
                 x:Name="MessageLabel"
+                Padding="16"
                 FontAttributes="Bold"
-                FontSize="14"
+                FontSize="16"
                 HorizontalTextAlignment="Center"
                 Text="Default Message"
-                TextColor="White" />
-        </Border>
+                TextColor="White"
+                VerticalOptions="Center" />
+        </av:AcrylicView>
     </Grid>
 </mopup:PopupPage>
